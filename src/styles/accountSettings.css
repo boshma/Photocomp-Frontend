@@ -1,0 +1,62 @@
+/* Account Settings page styles */
+.account-settings {
+    background-color: #121212;
+    min-height: 100vh;
+}
+
+.account-settings h2,
+.account-settings h3,
+.account-settings h4 {
+    font-family: 'Michroma', sans-serif;
+    letter-spacing: 1px;
+}
+
+.account-settings .form-control {
+    background-color: #212529;
+    border-color: #495057;
+    color: #f8f9fa;
+}
+
+.account-settings .form-control:focus {
+    background-color: #212529;
+    color: #f8f9fa;
+    border-color: #6c757d;
+    box-shadow: 0 0 0 0.25rem rgba(108, 117, 125, 0.25);
+}
+
+.account-settings .form-control::placeholder {
+    color: #6c757d;
+}
+
+.account-settings .form-label {
+    font-family: 'Michroma', sans-serif;
+    font-size: 1rem;
+}
+
+.account-settings .btn {
+    font-family: 'Michroma', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.5rem;
+}
+
+.delete-account {
+    border-top: 1px solid #343a40;
+    margin-top: 3rem;
+    padding-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .account-settings .form-label {
+        font-size: 0.9rem;
+    }
+
+    .account-settings h2 {
+        font-size: 1.5rem;
+    }
+
+    .account-settings h3 {
+        font-size: 1.3rem;
+    }
+}

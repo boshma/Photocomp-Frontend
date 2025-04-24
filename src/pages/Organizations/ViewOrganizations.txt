@@ -1,0 +1,160 @@
+// import React from 'react';
+// import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+// import Organizations from './ViewOrganizations';
+// import { BrowserRouter as Router } from 'react-router-dom';
+// import AuthContext, { AuthContextType, User } from '../../context/AuthContext';
+// import * as OrgService from '../../context/OrgService';
+// import { Organization, OrganizationsResponse } from '../../context/OrgService';
+
+// // Mock child components
+// jest.mock('../../components/bars/SideBar/SideBar', () => () => <div data-testid="sidebar">Sidebar</div>);
+// jest.mock('../../components/bars/TopBar/TopBar', () => ({ searchComponent, rightComponents }: any) => (
+//   <div data-testid="topbar">
+//     {searchComponent}
+//     {rightComponents}
+//   </div>
+// ));
+// jest.mock('../../components/bars/SearchBar/SearchBar', () => ({ value, onChange, onSubmit }: any) => (
+//   <form onSubmit={onSubmit}>
+//     <input
+//       data-testid="search-input"
+//       value={value}
+//       onChange={onChange}
+//       placeholder="Search organizations..."
+//     />
+//     <button type="submit">Search</button>
+//   </form>
+// ));
+// jest.mock('../../components/navButton/NavButton', () => ({ children, ...props }: any) => (
+//   <button {...props}>{children}</button>
+// ));
+// jest.mock('../../components/cards/galleryCard/GalleryCard', () => ({ item }: any) => (
+//   <div data-testid="gallery-card">{item.name}</div>
+// ));
+
+// describe('Organizations Page', () => {
+//   beforeEach(() => {
+//     jest.clearAllMocks();
+//   });
+
+//   const mockUser: User = {
+//     id: 'user-1',
+//     email: 'test@example.com',
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     role: 'admin'
+//   };
+
+//   const mockAuthContextValue: AuthContextType = {
+//     user: mockUser,
+//     token: 'mock-token',
+//     setUser: jest.fn(),
+//     setToken: jest.fn(),
+//     logout: jest.fn()
+//   };
+
+//   const mockOrganizations: Organization[] = [
+//     {
+//       id: '1',
+//       name: 'Org One',
+//       description: 'Desc One',
+//       logoUrl: '',
+//       PK: 'ORG#1',
+//       SK: 'ORG#1',
+//       isPublic: true,
+//       createdAt: '2023-01-01',
+//       updatedAt: '2023-01-01',
+//       GSI1PK: 'ORG#1',
+//       GSI1SK: 'ORG#1',
+//       createdBy: 'user#1',
+//       type: 'non-profit'
+//     },
+//     {
+//       id: '2',
+//       name: 'Org Two',
+//       description: 'Desc Two',
+//       logoUrl: '',
+//       PK: 'ORG#2',
+//       SK: 'ORG#2',
+//       isPublic: true,
+//       createdAt: '2023-01-02',
+//       updatedAt: '2023-01-02',
+//       GSI1PK: 'ORG#2',
+//       GSI1SK: 'ORG#2',
+//       createdBy: 'user#2',
+//       type: 'ngo'
+//     }
+//   ];
+
+//   const mockResponse: OrganizationsResponse = {
+//     message: 'Success',
+//     data: {
+//       organizations: mockOrganizations
+//     },
+//     lastEvaluatedKey: null
+//   };
+
+//   it('renders organizations from API', async () => {
+//     jest.spyOn(OrgService, 'getPublicOrganizations').mockResolvedValueOnce(mockResponse);
+
+//     render(
+//       <Router>
+//         <AuthContext.Provider value={mockAuthContextValue}>
+//           <Organizations />
+//         </AuthContext.Provider>
+//       </Router>
+//     );
+
+//     await waitFor(() => {
+//       expect(screen.getAllByTestId('gallery-card')).toHaveLength(mockOrganizations.length);
+//     });
+//   });
+
+//   it('displays search input and triggers handler', async () => {
+//     jest.spyOn(OrgService, 'getPublicOrganizations').mockResolvedValueOnce(mockResponse);
+
+//     render(
+//       <Router>
+//         <AuthContext.Provider value={mockAuthContextValue}>
+//           <Organizations />
+//         </AuthContext.Provider>
+//       </Router>
+//     );
+
+//     const input = screen.getByTestId('search-input') as HTMLInputElement;
+//     fireEvent.change(input, { target: { value: 'Health' } });
+//     expect(input.value).toBe('Health');
+
+//     fireEvent.submit(input.closest('form')!);
+//     // We could spy on console.log here if needed
+//   });
+
+//   it('renders sidebar and topbar', () => {
+//     render(
+//       <Router>
+//         <AuthContext.Provider value={{ ...mockAuthContextValue, user: null, token: null }}>
+//           <Organizations />
+//         </AuthContext.Provider>
+//       </Router>
+//     );
+
+//     expect(screen.getByTestId('sidebar')).toBeInTheDocument();
+//     expect(screen.getByTestId('topbar')).toBeInTheDocument();
+//   });
+
+//   it('shows error message if API fails', async () => {
+//     jest.spyOn(OrgService, 'getPublicOrganizations').mockRejectedValueOnce(new Error('Failed'));
+
+//     render(
+//       <Router>
+//         <AuthContext.Provider value={mockAuthContextValue}>
+//           <Organizations />
+//         </AuthContext.Provider>
+//       </Router>
+//     );
+
+//     await waitFor(() => {
+//       expect(screen.getByText('Failed to fetch organizations')).toBeInTheDocument();
+//     });
+//   });
+// });

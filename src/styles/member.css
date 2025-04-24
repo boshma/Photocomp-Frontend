@@ -1,0 +1,58 @@
+.member-card {
+    overflow: hidden;
+    border-radius: 8px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.member-card.selected {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.member-card .card-title {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.member-row {
+    margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+    position: sticky;
+    bottom: 20px;
+    background-color: rgba(33, 37, 41, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 100;
+    width: fit-content;
+}
+
+.admin-card {
+    border-left: 4px solid #0d6efd;
+}
+
+.regular-card {
+    border-left: 4px solid #6c757d;
+}
+
+.row-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.row-title .requests-button {
+    width: 150px;
+    border: 1px solid #fff;
+}

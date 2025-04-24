@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+.create-organization-page {
+    min-height: 100vh;
+    background-color: #212529;
+    color: white;
+}
+
+.create-organization-page h1,
+.create-organization-page h2,
+.create-organization-page .form-label {
+    font-family: 'Michroma', sans-serif;
+}
+
+.create-organization-page .form-control {
+    padding: 14px 16px;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+}
+
+.create-organization-page .form-control::placeholder {
+    color: #adb5bd;
+}
+
+.create-organization-page .btn {
+    font-family: 'Michroma', sans-serif;
+    font-size: 14px;
+    line-height: 15px;
+    border-radius: 6px;
+    padding: 10px 16px;
+}
+
+.custom-file-upload {
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+}
+
+.custom-file-upload .form-control {
+    border: none;
+    background: transparent;
+}
+
+.main-content,
+.create-organization-page {
+    overflow: visible;
+}
+
+.main-content,
+.create-event-page {
+    overflow: visible;
+}
+
+.main-content,
+.organization-details-page {
+    overflow: visible;
+}
+
+.main-content,
+.upload-photo-page {
+    overflow: visible;
+}

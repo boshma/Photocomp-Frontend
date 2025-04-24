@@ -1,0 +1,55 @@
+{
+    "data": {
+        "status": "success",
+        "data": {
+            "user": {
+                "PK": "USER#89b3b414-72e4-485a-ba97-e9841812fc54",
+                "SK": "ENTITY",
+                "id": "89b3b414-72e4-485a-ba97-e9841812fc54",
+                "email": "test@example.com",
+                "firstName": "john",
+                "lastName": "doe",
+                "role": "USER",
+                "createdAt": "2025-04-01T17:23:29.450Z",
+                "updatedAt": "2025-04-01T17:23:29.450Z",
+                "type": "USER",
+                "GSI1PK": "EMAIL#test@example.com",
+                "GSI1SK": "ENTITY"
+            },
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg5YjNiNDE0LTcyZTQtNDg1YS1iYTk3LWU5ODQxODEyZmM1NCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzQzNTI4MjA5LCJleHAiOjE3NDM2MTQ2MDl9.4OCWhQFV09awQN3YgzCGXJoziuBniuyF9iVoO2yEMcg"
+        }
+    },
+    "status": 201,
+    "statusText": "Created",
+    "headers": {
+        "content-length": "618",
+        "content-type": "application/json; charset=utf-8"
+    },
+    "config": {
+        "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false
+        },
+        "adapter": ["xhr", "http", "fetch"],
+        "transformRequest": [null],
+        "transformResponse": [null],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImI4OGY2ZmNlLTZjZGMtNDZkNy1hMzQzLWI5YTZhMGI4MzVlYiIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzQzNTI4MTQ4LCJleHAiOjE3NDM2MTQ1NDh9.8InIRoa0Ht7S5IYy-0Rysrzd_F1B0eo_a72bjJwrLw8"
+        },
+        "baseURL": "http://localhost:3000",
+        "method": "post",
+        "url": "/api/auth/register",
+        "data": "{\"email\":\"test@example.com\",\"password\":\"1234567890\",\"username\":\"test1\",\"firstName\":\"john\",\"lastName\":\"doe\"}",
+        "allowAbsoluteUrls": true
+    },
+    "request": {}
+}

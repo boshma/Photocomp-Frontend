@@ -1,0 +1,54 @@
+{
+    "data": {
+        "status": "success",
+        "data": {
+            "user": {
+                "lastName": "doe",
+                "createdAt": "2025-04-01T17:23:29.450Z",
+                "email": "test@example.com",
+                "GSI1SK": "ENTITY",
+                "firstName": "john",
+                "GSI1PK": "EMAIL#test@example.com",
+                "role": "USER",
+                "updatedAt": "2025-04-01T17:23:29.450Z",
+                "SK": "ENTITY",
+                "id": "89b3b414-72e4-485a-ba97-e9841812fc54",
+                "PK": "USER#89b3b414-72e4-485a-ba97-e9841812fc54",
+                "type": "USER"
+            },
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg5YjNiNDE0LTcyZTQtNDg1YS1iYTk3LWU5ODQxODEyZmM1NCIsImVtYWlsIjoidGVzdEBleGFtcGxlLmNvbSIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzQzNTM5NDM0LCJleHAiOjE3NDM2MjU4MzR9.-KuWLnzq7pg_jDOsq8orvSSfC3ceESPBMttS1uwuIkY"
+        }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+        "content-length": "618",
+        "content-type": "application/json; charset=utf-8"
+    },
+    "config": {
+        "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false
+        },
+        "adapter": ["xhr", "http", "fetch"],
+        "transformRequest": [null],
+        "transformResponse": [null],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "env": {},
+        "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+        },
+        "baseURL": "http://localhost:3000",
+        "method": "post",
+        "url": "/api/auth/login",
+        "data": "{\"email\":\"test@example.com\",\"password\":\"1234567890\"}",
+        "allowAbsoluteUrls": true
+    },
+    "request": {}
+}

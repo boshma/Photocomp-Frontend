@@ -1,0 +1,62 @@
+{
+    "name": "photocomp-frontend",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "test": "jest",
+        "coverage": "jest --coverage",
+        "build": "vite build --mode production",
+        "lint": "eslint .",
+        "preview": "vite preview",
+        "format": "prettier . --write",
+        "cypress:open": "cypress open --config-file cypress-config.ts",
+        "cypress:run": "cypress run --config-file cypress-config.ts",
+        "build:with-types": "tsc -b && vite build"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.8",
+        "axios": "^1.8.4",
+        "bootstrap": "^5.3.3",
+        "bootstrap-icons": "^1.11.3",
+        "date-fns": "^4.1.0",
+        "photocomp-frontend": "file:",
+        "react": "^19.0.0",
+        "react-bootstrap": "^2.10.9",
+        "react-bootstrap-icons": "^1.11.5",
+        "react-dom": "^19.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.21.0",
+        "@testing-library/dom": "^10.4.0",
+        "@testing-library/jest-dom": "^6.6.3",
+        "@testing-library/react": "^16.2.0",
+        "@types/jest": "^29.5.14",
+        "@types/react": "^19.0.12",
+        "@types/react-dom": "^19.0.4",
+        "@vitejs/plugin-react": "^4.3.4",
+        "@vitejs/plugin-react-swc": "^3.9.0",
+        "cypress": "^14.2.0",
+        "eslint": "^9.21.0",
+        "eslint-plugin-react-hooks": "^5.1.0",
+        "eslint-plugin-react-refresh": "^0.4.19",
+        "globals": "^15.15.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "prettier": "^3.5.3",
+        "react-router-dom": "^7.4.1",
+        "sass": "^1.86.0",
+        "ts-jest": "^29.3.0",
+        "ts-node": "^10.9.2",
+        "typescript": "~5.7.2",
+        "typescript-eslint": "^8.24.1",
+        "vite": "^6.2.0"
+    },
+    "overrides": {
+        "@cypress/react18": {
+            "@types/react-dom": "$@types/react-dom"
+        }
+    }
+}

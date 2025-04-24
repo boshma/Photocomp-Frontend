@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+@font-face {
+    font-family: CapsuleWeb;
+    src: url('../../public/Capsulexpromediumuc-DA20.otf') format('opentype');
+}
+
+* {
+    font-family: 'Michroma', 'sans-serif';
+}

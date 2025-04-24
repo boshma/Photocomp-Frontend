@@ -1,0 +1,24 @@
+
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "target": "ES2020",
+        "module": "ESNext",
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
+        "strict": false,         
+        "skipLibCheck": true,
+        "moduleResolution": "bundler",
+        "isolatedModules": true,
+        "noEmit": true,
+        "composite": true,
+        "noImplicitAny": false,    
+        "strictNullChecks": false  
+    },
+    "include": ["src", "tests/__mocks__/fileMock.js"],
+    "references": [
+        { "path": "./tsconfig.jest.json" },
+        { "path": "./tsconfig.app.json" },
+        { "path": "./tsconfig.node.json" }
+    ]
+}

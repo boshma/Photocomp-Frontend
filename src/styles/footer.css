@@ -1,0 +1,27 @@
+.footer {
+    z-index: 1000;
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.footer-copyright {
+    opacity: 0.8;
+}
+
+.footer-links a {
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-shift {
+    margin-left: 200px;
+}

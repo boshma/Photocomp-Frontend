@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://www.fontspace.com/capsule-x-pro-medium-font-f23978');
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Michroma', sans-serif;
+}
+
+.sidebar-brand img {
+    width: 175px;
+}
+
+.sidebar-link {
+    font-family: 'Michroma', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.sidebar-link.active {
+    background-color: #71797e;
+}

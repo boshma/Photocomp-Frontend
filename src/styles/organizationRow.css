@@ -1,0 +1,33 @@
+/* src/styles/organization-row.css */
+.organization-row {
+    margin-bottom: 2rem;
+}
+
+.row-container {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.row-container.expanded {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #6c757d #f0f0f0;
+}
+
+/* Style scrollbar for Webkit browsers */
+.row-container.expanded::-webkit-scrollbar {
+    height: 8px;
+}
+
+.row-container.expanded::-webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.row-container.expanded::-webkit-scrollbar-thumb {
+    background-color: #6c757d;
+    border-radius: 4px;
+}

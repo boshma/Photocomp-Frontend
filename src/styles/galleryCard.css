@@ -1,0 +1,123 @@
+.gallery-card {
+    overflow: hidden;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+    border-radius: 0.25rem;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: white;
+    z-index: 1;
+}
+
+.organization-card .card-content {
+    text-align: center;
+}
+
+.event .card-content {
+    justify-content: space-between;
+}
+
+.card-title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.organization-card .card-title {
+    font-size: 2rem;
+}
+
+.card-description {
+    color: white;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.organization-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    z-index: 2;
+    font-size: 0.8rem;
+}
+
+.photo .card-overlay {
+    background: none;
+}
+
+.organization-card,
+.event {
+    transition: transform 0.2s ease;
+}
+
+.organization-card:hover,
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.25rem;
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    color: white;
+    z-index: 1;
+}
+
+.gallery-card.photo {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: none;
+}
+
+.gallery-card.photo .card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}

@@ -1,0 +1,109 @@
+.form-container {
+    background-color: #212529;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.auth-form {
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-title {
+    font-family: CapsuleWeb, 'Arial', sans-serif;
+    letter-spacing: 1px;
+    font-size: 8.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+    font-weight: 50;
+}
+
+.auth-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input {
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    border-radius: 0 !important;
+    width: 100%;
+}
+
+.form-input:focus {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.btn-primary {
+    background-color: #212529 !important;
+    border-color: #fff !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.btn-light {
+    background-color: #fff !important;
+    color: #212529 !important;
+    border-color: #212529 !important;
+    border-radius: 0 !important;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.form-row .form-group {
+    margin-bottom: 0;
+}
+
+.back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border: 0;
+    border-radius: 0 !important;
+    padding: 0.5rem 1rem !important;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    z-index: 100;
+    width: auto !important;
+}
+
+.back-button.btn-light {
+    background-color: #fff !important;
+    color: #212529 !important;
+    border-color: #fff !important;
+}
+
+.back-button.btn-dark {
+    background-color: #212529 !important;
+    color: #fff !important;
+    border-color: #212529 !important;
+}

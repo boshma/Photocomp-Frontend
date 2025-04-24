@@ -1,0 +1,39 @@
+.custom-create-button {
+    background-color: #6c757d; /* Custom grey */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.custom-create-button:hover {
+    background-color: #71797e;
+}
+
+.icon-only-button {
+    all: unset; /* strips all default styles */
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.icon-only-button:hover {
+    opacity: 0.8;
+}
+
+.attend-event-button {
+    background-color: #6c757d; /* solid black */
+    color: white; /* white text */
+    font-weight: 600; /* bold text */
+    font-size: 14px;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.attend-event-button:hover {
+    background-color: #71797e; /* slightly lighter black on hover */
+}
