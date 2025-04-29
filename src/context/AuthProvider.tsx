@@ -10,7 +10,6 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
         const initializeAuth = () => {
             const storedUser = localStorage.getItem('user');
             const storedToken = localStorage.getItem('token');
-            // hi
             if (storedUser && storedToken) {
                 try {
                     setUser(JSON.parse(storedUser));
